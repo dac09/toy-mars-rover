@@ -6,15 +6,14 @@ let path = require('path');
 let compression = require('compression');
 let errorHandler = require('errorhandler');
 let morgan = require('morgan');
-let config = require('../config.json');
 
 module.exports = function(app, express) {
 
-  let environment = process.env.NODE_ENV || config.environment || 'development';
+  let environment = process.env.NODE_ENV || 'development';
 
-  if (environment == 'production') {
+  if (environment === 'production') {
     app.use(compression());
-  } else if (environment == 'development') {
+  } else if (environment === 'development') {
     app.use(errorHandler());
   }
 

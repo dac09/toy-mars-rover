@@ -25,18 +25,19 @@
     "url": "https://github.com/boadude/express-restful-starter/issues"
   },
   "dependencies": {
-    "bluebird": "^3.1.5",
     "body-parser": "^1.9.0",
     "compression": "^1.5.2",
     "errorhandler": "^1.4.3",
     "express": "~4.9.0",
-    "express-jwt": "^3.3.0",
     "jsonwebtoken": "^5.5.4",
+    "lodash": "^4.15.0",
     "lokijs": "^1.4.1",
+    "lowdb": "^0.13.1",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "yaml-config": "^0.3.0"
   },
   "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {

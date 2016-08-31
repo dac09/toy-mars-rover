@@ -1,9 +1,10 @@
 'use strict';
 
-let TodosMiddleware = autoload('/app/middlewares/TodosMiddleware');
+const InfoRoute = require('./routes/InfoRoute');
 
-module.exports = [{
-  path: '/todos',
-  middleware: [TodosMiddleware.checkAnything, TodosMiddleware.checkAnythingTwo],
-  handler: autoload('./app/routes/TodosRoute')
+const Routes = [{
+  path: '/info',
+  handler: InfoRoute,
 }];
+
+module.exports = Routes;

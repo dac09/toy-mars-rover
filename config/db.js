@@ -1,19 +1,30 @@
 'use strict';
 
-let config = require('../config.json');
+const low = require('lowdb');
+const db = low();
 
-let server = process.env.SERVER || config.database.server;
-let database = process.env.DB || config.database.db;
-let username = process.env.USERNAME || config.database.username;
-let password = process.env.PASSWORD || config.database.password;
-let dialect = process.env.DIALECT || config.database.dialect;
 
-let db = new Sequelize(database, username, password, {
-  host: server,
-  dialect: dialect,
-  logging: false
-});
+// Instantiate LowDB
+// Using in memory storage
 
-db.Sequelize = Sequelize;
+// Hard coding this for the sake of the test
+db.defaults({
+	otherRovers: [
+		{
+			x: 2,
+			y: 2,
+		}
+	],
+	gridSize: {
+		x: 10,
+		y: 7,
+	},
+	position: {
+		x: 1,
+		y: 3
+	},
+	direction: 0,
+})
+.value();
 
 module.exports = db;

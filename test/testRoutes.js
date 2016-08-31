@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 
 let expect = chai.expect;
 
-let TodosServices = require('../app/services/TodosService');
+let RoverServices = require('../app/services/RoverService');
 
 const URI = 'http://127.0.0.1:' + config.port;
 
@@ -22,7 +22,7 @@ describe('Todos :', () => {
       text: 'OK, go to the shop and buy something, now!'
     };
 
-    TodosServices.create(params)
+    RoverServices.create(params)
       .then((results) => {
         idTodoRecord = results.get('id');
 
@@ -35,7 +35,7 @@ describe('Todos :', () => {
       id: idTodoRecord
     };
 
-    TodosServices.destroy(params);
+    RoverServices.destroy(params);
 
     done();
   });

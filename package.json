@@ -32,11 +32,11 @@
     "express": "~4.9.0",
     "express-jwt": "^3.3.0",
     "jsonwebtoken": "^5.5.4",
+    "lokijs": "^1.4.1",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "mysql": "^2.10.2",
-    "nodemon": "^1.8.1",
-    "sequelize": "^3.9.0"
+    "nodemon": "^1.8.1"
   },
   "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {

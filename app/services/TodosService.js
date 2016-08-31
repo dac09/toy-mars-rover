@@ -18,7 +18,7 @@ let service = {
 
   create: function(params) {
 
-    return Todo.create(params);
+    return Todo.insert(params);
   },
 
   update: function(params, sets) {
@@ -30,7 +30,7 @@ let service = {
 
   destroy: function(params){
 
-    return Todo.destroy({
+    return Todo.remove({
       where: params
     });
   }

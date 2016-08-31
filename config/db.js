@@ -1,6 +1,5 @@
 'use strict';
 
-let Sequelize = require('sequelize');
 let config = require('../config.json');
 
 let server = process.env.SERVER || config.database.server;

@@ -8,6 +8,8 @@ let express = require('express');
 let http = require('http');
 var numCPUs = require('os').cpus().length;
 
+
+// Clustering
 if (cluster.isMaster) {
 
   console.log('Clustering: I will start ' + numCPUs + ' workers...');
@@ -44,7 +46,7 @@ if (cluster.isMaster) {
   });
 
   /* ERRORS */
-  app.use(function(req, res, next) {
+  app.use((req, res, next) => {
     res.status(404);
 
     res.json({
@@ -52,7 +54,7 @@ if (cluster.isMaster) {
     });
   });
 
-  app.use(function (err, req, res, next) {
+  app.use( (err, req, res, next) => {
     console.log(err.name);
     if (err.name === 'UnauthorizedError') {
 
@@ -62,7 +64,7 @@ if (cluster.isMaster) {
     }
   });
 
-  app.use(function(err, req, res, next) {
+  app.use((err, req, res, next) => {
     res.status(err.status || 500);
 
     res.json({

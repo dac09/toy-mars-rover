@@ -1,10 +1,17 @@
 'use strict';
 
-const InfoRoute = require('./routes/InfoRoute');
+const StatusRoute = require('./routes/StatusRoute');
+const Position = require('./routes/Position');
 
-const Routes = [{
-  path: '/info',
-  handler: InfoRoute,
-}];
+const Routes = [
+	{
+  	path: '/',
+  	handler: StatusRoute,
+	},
+	{
+		path: '/position',
+		handler: Position,
+	}
+];
 
 module.exports = Routes;

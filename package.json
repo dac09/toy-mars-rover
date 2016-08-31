@@ -1,13 +1,13 @@
 {
-  "name": "express-restful-starter",
-  "version": "1.0.0",
-  "description": "expressjs restfull starter",
+  "name": "mars-rover-api",
+  "version": "0.0.1",
+	"private": "true",
+  "description": "Expressjs API server to control imaginary Mars rover",
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
     "start": "node server.js",
-    "dev": "./node_modules/.bin/nodemon -w ./ --harmony",
-    "db:tables:create": "node ./tasks/migrate.js"
+    "dev": "./node_modules/.bin/nodemon -w ./ --harmony"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,8 @@
     "starter",
     "boilerplate"
   ],
-  "author": "Miguel Meza",
+  "author": "Daniel Choudhury",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/boadude/express-restful-starter/issues"
-  },
   "dependencies": {
     "body-parser": "^1.9.0",
     "compression": "^1.5.2",
@@ -39,7 +36,6 @@
     "nodemon": "^1.8.1",
     "yaml-config": "^0.3.0"
   },
-  "homepage": "https://github.com/boadude/express-restful-starter",
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-http": "^1.0.0",

@@ -12,7 +12,7 @@ let app = express();
 
 // Read configuration files
 const yConfig = require('yaml-config');
-console.log(`${__dirname}/config/app.yaml`)
+
 const config = yConfig.readConfig(`${__dirname}/config/app.yaml`, process.env.NODE_ENV);
 app.locals.config = config;
 

@@ -8,7 +8,28 @@ const db = require('../../config/db');
 let service = {
   info: () => {
 		return db.value();
-  }
+  },
+
+	position: () => {
+		return db.get('position').value();
+  },
+
+	otherRovers: () => {
+		return db.get('otherRovers').value();
+	},
+
+	findRoverAt: (position) => {
+		if (position.x && position.y) {
+			return db.get(otherRovers)
+				.find(position)
+				.value();
+		}
+
+		return null;
+	},
+
+
+
 };
 
 module.exports = service;

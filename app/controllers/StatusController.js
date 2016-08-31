@@ -3,8 +3,9 @@
 let RoverService = autoload('./app/services/RoverService');
 
 let controller = {
-  info: function(req, res, next) {
+  info: (req, res, next) => {
     let info = RoverService.info();
+    info.status = 'Operational';
     res.json(info);
   },
 };

@@ -14,6 +14,30 @@ let controller = {
 		const gridSize = RoverService.gridSize();
 
 		if (moveDirection in req.app.locals.config.supportedDirections) {
+			// Rotation
+			if (moveDirection === 'LEFT') {
+				if (Math.abs(position.direction) === 180) {
+				 position.direction = 90;
+			 } else {
+				 position.direction = position.direction - 90;
+			 }
+
+			 res.json(position);
+			 return;
+			}
+
+			if (moveDirection === 'RIGHT') {
+				if (Math.abs(position.direction) === 180) {
+				 position.direction = -90;
+			 } else {
+				 position.direction = position.direction + 90;
+			 }
+
+			 res.json(position);
+			 return;
+			}
+
+			// Movement calculations
 			let positionToChange = 'y';
 			let plus = true;
 

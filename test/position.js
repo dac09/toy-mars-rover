@@ -53,19 +53,58 @@ describe('Position :', () => {
 	})
 
 	it('Should update y coordinate when sending UP command', (done) => {
+		chai.request(URI)
+			.put(url)
+			.send({
+				'direction': 'UP'
+			})
+			.end(function(err, res) {
+				expect(res).to.have.status(200);
 
+				done();
+			});
 	})
 
 	it('Should update y coordinate when sending DOWN command', (done) => {
+		chai.request(URI)
+			.put(url)
+			.send({
+				'direction': 'DOWN'
+			})
+			.end(function(err, res) {
+				expect(res).to.have.status(200);
+
+				done();
+			});
 
 	})
 
 
 	it('Should update direction when sending LEFT command', (done) => {
+		chai.request(URI)
+			.put(url)
+			.send({
+				'direction': 'LEFT'
+			})
+			.end(function(err, res) {
+				expect(res).to.have.status(200);
+
+				done();
+			});
 
 	})
 
 	it('Should update direction when sending RIGHT command', (done) => {
+		chai.request(URI)
+			.put(url)
+			.send({
+				'direction': 'RIGHT'
+			})
+			.end(function(err, res) {
+				expect(res).to.have.status(200);
+
+				done();
+			});
 
 	})
 

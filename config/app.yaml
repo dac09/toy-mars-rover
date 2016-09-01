@@ -4,6 +4,8 @@ default:
  supportedDirections:
   UP: true
   DOWN: true
+  LEFT: true
+  RIGHT: true
 
 test:
  port: 8888

@@ -31,3 +31,14 @@ maybe the spec required a control centre API, rather than sit on a rover. May ne
 Req --> Push action to queue --> Check if action is possible --> Pop from queue --> Do action
 
 We can also set an interval (but then, it becomes stateful)
+
+- MOVE vs Rotate
+To be kind of restful, we need to accept PUT requests to position. But sending directions to move isn't strictly
+RESTful. So for now, all the code is in one controller - messy, but a compromise based on the spec.
+
+Putting direction in a separate object is also misleading, as you don't know from GET position which way you are facing
+
+- Testing isn't complete
+Because I can't currently mock the DB (don't have a method to update current position directly), its difficult to unit
+test movements. I'm skipping this currently, because we're not using a real database, so mocking it without additional
+frameworks will take a lot of time!

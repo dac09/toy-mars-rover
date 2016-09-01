@@ -4,6 +4,11 @@
 I started off from https://github.com/boadude/express-restful-starter
 
 
+#### Swagger / Docs?
+I didn't get round to it. 
+https://github.com/fliptoo/swagger-express looks pretty good though
+
+
 #### Why in-memory DB?
 The code is written in a way so that it's easy to replace the DB in `db.js`
 and then updated only the services that are affected.

@@ -1,5 +1,9 @@
 ## Thoughts
 
+#### Starter kit
+I started off from https://github.com/boadude/express-restful-starter
+
+
 #### Why in-memory DB?
 The code is written in a way so that it's easy to replace the DB in `db.js`
 and then updated only the services that are affected.

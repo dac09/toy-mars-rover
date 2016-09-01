@@ -52,6 +52,9 @@ describe('Position :', () => {
 
 	})
 
+
+	// SEE NOTE FOR INCOMPLETE TESTS!
+
 	it('Should update y coordinate when sending UP command', (done) => {
 		chai.request(URI)
 			.put(url)
@@ -107,5 +110,7 @@ describe('Position :', () => {
 			});
 
 	})
+
+	// other cases to test, would be rotate then move in every direction
 
 });

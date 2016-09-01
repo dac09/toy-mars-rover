@@ -21,9 +21,9 @@ db.defaults({
 	},
 	position: {
 		x: 1,
-		y: 3
+		y: 3,
+		direction: 0,
 	},
-	direction: 0,
 })
 .value();
 

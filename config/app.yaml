@@ -1,6 +1,9 @@
 default:
  port: 8888
  name: 'Rover'
+ supportedDirections:
+  UP: true
+  DOWN: true
 
 test:
  port: 8888

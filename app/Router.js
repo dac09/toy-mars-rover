@@ -1,7 +1,9 @@
 'use strict';
 
 const StatusRoute = require('./routes/StatusRoute');
+
 const Position = require('./routes/Position');
+const positionCheck = require('./middlewares/positionCheck');
 
 const Routes = [
 	{
@@ -10,6 +12,7 @@ const Routes = [
 	},
 	{
 		path: '/position',
+		middleware: positionCheck,
 		handler: Position,
 	}
 ];

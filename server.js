@@ -41,15 +41,6 @@ app.use((req, res, next) => {
   });
 });
 
-app.use( (err, req, res, next) => {
-  console.log(err.name);
-  if (err.name === 'UnauthorizedError') {
-
-    res.status(401).json({
-      error: 'Please send a valid Token...'
-    });
-  }
-});
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);

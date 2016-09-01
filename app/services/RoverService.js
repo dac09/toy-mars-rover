@@ -14,6 +14,10 @@ let service = {
 		return db.get('position').value();
   },
 
+	gridSize: () => {
+		return db.get('gridSize').value();
+  },
+
 	otherRovers: () => {
 		return db.get('otherRovers').value();
 	},

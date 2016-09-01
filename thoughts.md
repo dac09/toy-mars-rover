@@ -1,13 +1,12 @@
 ## Thoughts
 
-#### Why DB?
-Because, well, rover could go offline. You need persistent storage.
-
-#### Why in-memory?
+#### Why in-memory DB?
 The code is written in a way so that it's easy to replace the DB in `db.js`
 and then updated only the services that are affected.
 
 It would probably have been better to use mongoose or ORM with a memory driver, in retrospect, though!
+
+I imagined that having a DB might be nice if the rover goes offline ;)
 
 #### Autoload?
 Just came with the boiler plate

@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "dev": "./node_modules/.bin/nodemon -w ./ --harmony"
   },
   "repository": {

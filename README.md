@@ -53,5 +53,3 @@ For Testing:
  - Mocha
  - Chai
  - Chai-http
-
-In the folder */test* you can see a full test for the Todo API.
